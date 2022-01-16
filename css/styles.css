@@ -8,6 +8,7 @@
   --adrress-color: rgba(255, 255, 255, 0.6);
   --logo-color: #000000;
   --portfolio-cards-gap: 30px;
+  --icon-color: rgba(175, 177, 184, 1);
 }
 
 .visually-hidden {
@@ -105,11 +106,6 @@ ul {
   color: var(--main-bg-color);
 }
 
-/* .icon-mail {
-  width: 16px;
-  height: 12px;
-} */
-
 /*site nav*/
 
 .site-nav.list {
@@ -128,7 +124,7 @@ ul {
 .contacts-nav .mail,
 .contacts-nav .phone,
 .site-nav .link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -162,6 +158,13 @@ ul {
 .contacts-nav .mail,
 .contacts-nav .phone {
   color: var(--primary-text-color);
+  align-items: center;
+}
+
+.icon-mail,
+.icon-phone {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 /*Hero*/
@@ -170,6 +173,18 @@ ul {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/main-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero,
@@ -206,6 +221,21 @@ ul {
 }
 
 /*main*/
+
+.icon-area {
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-bg-color);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-advantage {
+  width: 70px;
+  height: 70px;
+}
 
 .advantage .item:not(:last-child) {
   margin-right: 30px;
@@ -263,6 +293,9 @@ ul {
   border-radius: 0px 0px 4px 4px;
 
   background-color: var(--main-bg-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team .item:not(:last-child) {
@@ -288,6 +321,71 @@ ul {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-right: 32px;
+  margin-left: 32px;
+}
+
+.media-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.media-link:hover,
+.media-link:focus {
+  background-color: var(--accent-color);
+}
+
+.media-link:hover svg,
+.media-link:focus svg {
+  fill: var(--main-bg-color);
+}
+
+.social-media svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+}
+
+/* our clients */
+
+.clients {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+.clients-list {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+
+.clients-list:hover,
+.clients-list:hover svg,
+.clients-list:focus,
+.clients-list:focus svg {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.clients svg {
+  width: 106px;
+  height: 60px;
+  fill: var(--icon-color);
 }
 
 /*footer*/
@@ -325,6 +423,50 @@ ul {
 .contacts li {
   margin-top: 9px;
 }
+
+.connect {
+  color: var(--main-bg-color);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+}
+
+.connect-section {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+  margin-top: 12px;
+}
+
+.connect-links {
+  height: 44px;
+  margin-top: 20px;
+}
+
+.links {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #44454e;
+}
+
+.links:hover,
+.links:focus {
+  background-color: var(--accent-color);
+}
+
+.links svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--main-bg-color);
+}
+
 /*portfolio*/
 
 .portfolio-nav {
@@ -335,6 +477,13 @@ ul {
 
 .portfolio-nav .item:not(:last-child) {
   margin-right: 8px;
+}
+
+.portfolio-nav .item:hover,
+.portfolio-nav .item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .secondary-button {
@@ -391,6 +540,12 @@ ul {
   margin-left: var(--portfolio-cards-gap);
   margin-top: var(--portfolio-cards-gap);
   background-color: var(--main-bg-color);
+}
+
+.portfolio-cards .item:hover,
+.portfolio-cards .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-content {
