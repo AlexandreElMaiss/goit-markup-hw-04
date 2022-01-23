@@ -174,7 +174,6 @@ ul {
   padding-top: 200px;
   padding-bottom: 200px;
   max-width: 1600px;
-  height: 600px;
   margin-right: auto;
   margin-left: auto;
   background-image: linear-gradient(
@@ -325,10 +324,12 @@ ul {
 
 .social-media {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 16px;
-  margin-right: 32px;
-  margin-left: 32px;
+}
+
+.social-media li:not(:last-child) {
+  margin-right: 10px;
 }
 
 .media-link {
@@ -427,37 +428,42 @@ ul {
 .connect {
   color: var(--main-bg-color);
   font-weight: 700;
-  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .footer {
   display: flex;
+  align-items: baseline;
 }
 
 .connect-section {
-  width: 206px;
-  height: 80px;
   margin-left: 70px;
-  margin-top: 12px;
 }
 
 .connect-links {
-  height: 44px;
   margin-top: 20px;
 }
 
 .links {
+  display: inline-flex;
+}
+
+.links a {
   width: 44px;
   height: 44px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   background-color: #44454e;
 }
 
-.links:hover,
-.links:focus {
+.links:not(:last-child) {
+  margin-right: 10px;
+}
+
+.links:hover a,
+.links:focus a {
   background-color: var(--accent-color);
 }
 
@@ -542,8 +548,8 @@ ul {
   background-color: var(--main-bg-color);
 }
 
-.portfolio-cards .item:hover,
-.portfolio-cards .item:focus {
+.portfolio-cards .link:hover,
+.portfolio-cards .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -558,6 +564,7 @@ ul {
 }
 
 .link {
+  display: block;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.14;
