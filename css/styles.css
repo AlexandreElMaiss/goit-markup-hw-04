@@ -362,7 +362,10 @@ ul {
 .clients {
   display: flex;
   margin-top: 50px;
-  justify-content: space-between;
+}
+
+.clients li:not(:last-child) {
+  margin-right: 30px;
 }
 
 .clients-list {
@@ -462,7 +465,7 @@ ul {
 }
 
 .links:hover a,
-.links:focus a {
+.links a:focus {
   background-color: var(--accent-color);
 }
 
@@ -562,7 +565,7 @@ ul {
   margin-top: 4px;
 }
 
-.link {
+.portfolio-cards .link {
   display: block;
   color: var(--primary-text-color);
   font-size: 16px;
